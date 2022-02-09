@@ -8,6 +8,7 @@ public class Interface {
         Indian Natasha = new Indian();
         System.out.println(Natasha.age(1995, 6, 1));
         System.out.println(Natasha.bmiCheck(1.53,89));
+
     }
 }
 
