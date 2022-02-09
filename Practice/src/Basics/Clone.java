@@ -1,4 +1,4 @@
-package com.company;
+package Basics;
 
 class Test2 implements Cloneable {
     int a;

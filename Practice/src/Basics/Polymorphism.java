@@ -1,6 +1,4 @@
-package com.company;
-
-import java.lang.reflect.Member;
+package Basics;
 
 public class Polymorphism {
     public static void main(String[] args) {

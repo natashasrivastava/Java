@@ -1,4 +1,4 @@
-package com.company;
+package Sorting;
 
 import java.util.Arrays;
 import java.util.Scanner;

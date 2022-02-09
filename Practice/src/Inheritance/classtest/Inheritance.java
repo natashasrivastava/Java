@@ -1,4 +1,4 @@
-package com.company;
+package Inheritance.classtest;
 
 public class Inheritance {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Inheritance {
     }
 }
 
-class MountainBike extends Bike{
+class MountainBike extends Bike {
     int height;
     MountainBike(int gear, int speed, int height)
     {

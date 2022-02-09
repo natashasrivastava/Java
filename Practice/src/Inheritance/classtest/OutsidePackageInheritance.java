@@ -1,6 +1,4 @@
-package com.classtest;
-
-import com.company.Bike;
+package Inheritance.classtest;
 
 public class OutsidePackageInheritance {
     public static void main(String args[]) {

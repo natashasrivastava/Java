@@ -1,4 +1,4 @@
-package com.company;
+package Inheritance.classtest;
 
 public class Bike {
     protected int gear;

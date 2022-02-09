@@ -1,8 +1,6 @@
-package com.company;
+package Basics;
 
-import java.util.Scanner;
 
-import static java.lang.Integer.sum;
 
 
 public class Main {
@@ -32,8 +30,7 @@ public class Main {
         System.out.println(num);
         System.out.println("Three digit Armstrong numbers are");
         printArmStrong();
-        MountainBike b = new MountainBike(10,20,40);
-        b.gear=30;
+
 
 
 
