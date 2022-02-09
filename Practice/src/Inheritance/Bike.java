@@ -1,4 +1,4 @@
-package Inheritance.classtest;
+package Inheritance;
 
 public class Bike {
     protected int gear;

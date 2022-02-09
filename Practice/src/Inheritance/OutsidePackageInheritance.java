@@ -1,4 +1,4 @@
-package Inheritance.classtest;
+package Inheritance;
 
 public class OutsidePackageInheritance {
     public static void main(String args[]) {
