@@ -1,8 +1,5 @@
 package Basics;
 
-
-
-
 public class Main {
     static void printArmStrong(){
         for(int i=100;i<=999;i++)
@@ -21,6 +18,7 @@ public class Main {
             }
 
         }
+
     }
 
     public static void main(String[] args) {
