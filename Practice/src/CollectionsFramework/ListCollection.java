@@ -1,6 +1,7 @@
 package CollectionsFramework;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class ListCollection {
@@ -10,7 +11,19 @@ public class ListCollection {
         list.add(20);
         list.add(30);
         Object[] arr = list.toArray();
-        for (Object x:arr)
+        System.out.println("Items in main list");
+        for (Object x:list)
             System.out.print(x+" ");
+        List<Integer> list1 = new LinkedList<>();
+        list1.add(12);
+        list1.add(24);
+        list.addAll(list1);
+        System.out.println();
+        System.out.println("Modified Items");
+        for (Object x:list)
+            System.out.print(x+" ");
+
+
+
     }
 }

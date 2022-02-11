@@ -12,6 +12,13 @@ public class TreeSetCollection {
         t.add("Ankush");
         for (Object e: t)
             System.out.println(e);
+        Set<String> t2 = new TreeSet<>();
+        t2.add("Deepika");
+        t.removeAll(t2);
+        System.out.println(t);
+
+
+
 
     }
 
