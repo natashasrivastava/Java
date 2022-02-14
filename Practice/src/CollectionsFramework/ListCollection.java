@@ -18,7 +18,7 @@ public class ListCollection {
         list1.add(12);
         list1.add(24);
         list.addAll(list1);
-        System.out.println();
+        System.out.println(list1.get(1));
         System.out.println("Modified Items");
         for (Object x:list)
             System.out.print(x+" ");

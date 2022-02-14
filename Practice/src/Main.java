@@ -14,7 +14,12 @@ final class Employee {
         this.name = name;
         this.Salary = salary;
         this.Department = department;
-        this.metadata = metadata;
+        Map<String, String> tempMap = new HashMap<>();
+
+        tempMap.putAll(metadata);
+
+        this.metadata = tempMap;
+
     }
 
     public int getEId() {
@@ -48,13 +53,17 @@ public class Main {
         map.put("1", "first");
         map.put("2", "second");
         Employee e = new Employee(1, "Natasha", 50000.0, "IQ", map);
-        System.out.println(e.getEId());
-        System.out.println(e.getName());
-        System.out.println(e.getDepartment());
-        System.out.println(e.getSalary());
-        System.out.println(e.getMetaData());
+        System.out.print(e.getEId()+ "\t");
+        System.out.print(e.getName()+ "\t");
+        System.out.print(e.getDepartment()+ "\t");
+        System.out.print(e.getSalary()+ "\t");
+        System.out.println(e.getMetaData()+ "\t");
         System.out.println(e.getName().replace("s","a"));
         System.out.println(e.getName());
+
+        Employee e1 = e;
+
+
 
     }
 }
