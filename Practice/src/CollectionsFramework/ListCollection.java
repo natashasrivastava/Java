@@ -11,6 +11,7 @@ public class ListCollection {
         list.add(20);
         list.add(30);
         Object[] arr = list.toArray();
+        System.out.println(list.get(2));
         System.out.println("Items in main list");
         for (Object x:list)
             System.out.print(x+" ");
