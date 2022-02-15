@@ -1,18 +1,13 @@
 package Basics;
 
-public class Testrun {
-    public static void main(String[] args) {
-      try{
-          int x=0;
-          for(x=1;x<4;x++);
-              System.out.println(x);
-      }
-      catch (Exception e){
+import java.util.Optional;
 
-      }
-      finally {
-          System.out.println("error");
-      }
+public class OptionalTest {
+    public static void main(String[] args) {
+        Optional<String> opt = Optional.ofNullable(null);
+        System.out.println(opt.isPresent());
+        System.out.println(Optional.empty().equals(opt));
+        //Object o = () -> {System.out.println("Tricky example");};
     }
 
 }

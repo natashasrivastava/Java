@@ -8,12 +8,13 @@ public class StringBasics {
         String nickName = "Natasha Srivastava";
         System.out.println(name == nickName);
 
-        String newnickName = new String("Natasha Srivastava");
+        String newnickName = new String("Natasha Srivastava").intern();
         System.out.println(name == newnickName);
         System.out.println(name.equals(newnickName));
 
         String twins = name;
         System.out.println(twins==name);
+
 
         System.out.println(name.charAt(9));
 
