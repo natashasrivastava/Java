@@ -27,5 +27,6 @@ public class Multithreading {
         MyThread1 t1 = new MyThread1();
         t.start();
         t1.start();
+        System.out.println("Hello World ");
     }
 }
