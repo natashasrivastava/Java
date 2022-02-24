@@ -1,38 +1,47 @@
 package Basics;
 
-import java.util.ArrayList;
-
 import java.util.*;
-import java.io.*;
+import java.security.*;
 
 public class Questions {
     public static void main(String[] args) {
+        DoNotTerminate.forbidExit();
 
-        Scanner in = new Scanner(System.in);
-        int t=in.nextInt();
-        for(int i=0;i<t;i++){
-            int a = in.nextInt();
-            int b = in.nextInt();
+        try {
+            Scanner in = new Scanner(System.in);
             int n = in.nextInt();
-            for(int j=0;j<n;j++)
-            {
-                int temp1 =a;
-                for(int k = 0;k<=j;k++)
-                {
+            in.close();
+            String s=String.valueOf(n);
 
-                    temp1+=(Math.pow(2,k)*b);
-                }
-                System.out.print(temp1 + " ");
+            if (n == Integer.parseInt(s)) {
+                System.out.println("Good job");
+            } else {
+                System.out.println("Wrong answer.");
             }
+        } catch (DoNotTerminate.ExitTrappedException e) {
+            System.out.println("Unsuccessful Termination!!");
         }
-        in.close();
-    }
-}
-
-
-class Solution{
-    public static void main(String []argh){
-    String s = new String();
 
     }
 }
+
+class DoNotTerminate {
+
+    public static class ExitTrappedException extends SecurityException {
+
+        private static final long serialVersionUID = 1;
+    }
+
+    public static void forbidExit() {
+        final SecurityManager securityManager = new SecurityManager() {
+            @Override
+            public void checkPermission(Permission permission) {
+                if (permission.getName().contains("exitVM")) {
+                    throw new ExitTrappedException();
+                }
+            }
+        };
+        System.setSecurityManager(securityManager);
+    }
+}
+
