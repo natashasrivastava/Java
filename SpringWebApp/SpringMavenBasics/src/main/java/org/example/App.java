@@ -1,11 +1,7 @@
 package org.example;
 
-import javafx.application.Application;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-
-import java.applet.AppletContext;
 
 
 /**
@@ -16,8 +12,8 @@ public class App {
 
         System.out.println("Hello World!");
 
-       ApplicationContext context = new ClassPathXmlApplicationContext("/Users/a1624jar/IdeaProjects/SpringWebApp/SpringMavenBasics/src/main/java/spring.xml");
-        Vehicle travel = (Vehicle) context.getBean("vehicle");
+       ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        Vehicle travel = (Vehicle) context.getBean("bike");
 
         travel.drive();
     }
