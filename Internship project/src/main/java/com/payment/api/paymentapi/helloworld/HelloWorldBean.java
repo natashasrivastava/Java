@@ -1,4 +1,4 @@
-package com.payment.api.paymentapi;
+package com.payment.api.paymentapi.helloworld;
 
 public class HelloWorldBean {
     @Override

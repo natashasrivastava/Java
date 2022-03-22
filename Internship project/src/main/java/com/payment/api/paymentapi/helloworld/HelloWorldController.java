@@ -1,4 +1,4 @@
-package com.payment.api.paymentapi;
+package com.payment.api.paymentapi.helloworld;
 
 import org.springframework.web.bind.annotation.*;
 
