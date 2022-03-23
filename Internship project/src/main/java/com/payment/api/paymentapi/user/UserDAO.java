@@ -1,6 +1,6 @@
 package com.payment.api.paymentapi.user;
 
-import com.payment.api.paymentapi.user.SubscribedChannels.subscribedChannels;
+import com.payment.api.paymentapi.SubscribedChannels.subscribedChannels;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -19,12 +19,12 @@ public class UserDAO {
         users.add(new User(2,"Pankaj", new Date(),true,0,0));
         users.add(new User(3,"Tushar", new Date(),false,0,1500));
     }
-    private static List<subscribedChannels> Lposts = new ArrayList<>();
+   /*private static List<subscribedChannels> Lposts = new ArrayList<>();
     static {
         Lposts.add(new subscribedChannels(1,10,"Hello Folks",12,3));
         Lposts.add(new subscribedChannels(2,10,"Hello, I am Natasha",2,31));
         Lposts.add(new subscribedChannels(1,10,"Hello Folks",12,38));
-    }
+    }*/
 
     public List<User> findAll(){
         return users;
@@ -57,7 +57,7 @@ public class UserDAO {
         return null;
     }
 
-    public List<subscribedChannels> findChannels(int id) {
+    /*public List<subscribedChannels> findChannels(int id) {
         List<subscribedChannels> channels = new ArrayList<>();
         for(subscribedChannels post : Lposts){
             if(post.getUserID()==id)
@@ -86,7 +86,7 @@ public class UserDAO {
         }
         Lposts.add(channels);
         return channels;
-    }
+    }*/
 
 
 

@@ -1,6 +1,6 @@
 package com.payment.api.paymentapi.pay;
 
-import javax.persistence.criteria.CriteriaBuilder;
+
 
 public class Payment {
     private Integer AccountNumber;
@@ -23,7 +23,7 @@ public class Payment {
     }
 
     public boolean isSuccess() {
-        return success;
+        return  success;
     }
 
 
@@ -33,4 +33,7 @@ public class Payment {
     }
 
 
+    public Integer getAmount() {
+        return Amount;
+    }
 }

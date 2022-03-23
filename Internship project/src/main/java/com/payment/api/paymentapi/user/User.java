@@ -1,10 +1,20 @@
 package com.payment.api.paymentapi.user;
 
+import com.payment.api.paymentapi.Bank.Bank;
+import com.payment.api.paymentapi.SubscribedChannels.subscribedChannels;
+
+import javax.annotation.Generated;
+import javax.persistence.*;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue
     private Integer id;
 
     @Size(min = 2)
@@ -15,6 +25,22 @@ public class User {
     private boolean subscription;
     private int previousSubscriptionAmount;
     private int WalletBalance;
+
+    @OneToMany(mappedBy = "user")
+    private List<subscribedChannels> channelsList;
+
+    public List<subscribedChannels> getChannelsList() {
+        return channelsList;
+    }
+
+    public void setChannelsList(List<subscribedChannels> channelsList) {
+        this.channelsList = channelsList;
+    }
+
+
+    public User(){
+
+    }
 
     public User(Integer id, String name, Date birthdate, boolean subscription, int previousSubscriptionAmount, int walletBalance) {
         this.id = id;
